@@ -2,7 +2,7 @@
 
 **Product Development Engineer | ATE, High-Volume Manufacturing, and Silicon Debug**
 
-Penang, Malaysia · WhatsApp: @wilsonng294 · [wsheng0827@gmail.com](mailto:wsheng0827@gmail.com) · [LinkedIn](https://www.linkedin.com/in/wooi-sheng-ng/)
+Penang, Malaysia · [![WhatsApp](./Image/whatsapp.svg)](https://wa.me/wilsonng294) [WhatsApp: @wilsonng294](https://wa.me/wilsonng294) · [![Gmail](./Image/gmail.svg)](mailto:wsheng0827@gmail.com) [wsheng0827@gmail.com](mailto:wsheng0827@gmail.com) · [![LinkedIn](./Image/linkedin.svg)](https://www.linkedin.com/in/wooi-sheng-ng/) [LinkedIn](https://www.linkedin.com/in/wooi-sheng-ng/)
 
 Results-driven product and test engineer experienced in automated test equipment (ATE) program development, high-volume manufacturing (HVM) ramp support, silicon debug, and test-cost optimization. Interested in applying production-test expertise and AI-driven automation to semiconductor manufacturing.
 

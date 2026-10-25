@@ -8,29 +8,29 @@ Results-driven product and test engineer experienced in automated test equipment
 
 ## Skills
 
-- **ATE and hardware:** ATE testing and debug, first-silicon debug, hardware design, TORCH, TPIE
+- **ATE and hardware:** ATE testing and debug, first-silicon debug, hardware design, test-program development
 - **AI and automation:** Model Context Protocol (MCP), GitHub Copilot, Gemini Enterprise, AI agent development, prompt engineering, workflow automation
 - **Software and programming:** Python, C#, GitHub Actions, CI/CD, Visual Studio, VS Code
 - **Analysis and collaboration:** JMP, Jupyter Notebook, data analysis, problem solving, cross-functional collaboration
 
 ## Key Achievements
 
-- Delivered the A-stepping IPU Production Release Qualification (PRQ) within an aggressive three-quarter timeline, supporting the product's transition to high-volume manufacturing.
-- Built AI-enabled engineering workflows: automated waterfall cascade yield studies and Kappa result compilation with email dispatch, reducing reporting turnaround to under five minutes; generated test-program release-note summaries by comparing cross-branch GitHub changes with submitter PR details; and automated lab support ticket submissions for loading-unit and recipe requests.
-- Enabled system power-on five days ahead of schedule and customer power-on prototype shipments two days early. Streamlined test-program CI/CD execution from 30 minutes to 3 minutes, contributing to a **$65M revenue pull-in**.
-- Saved approximately 80 seconds of test time through cold-socket optimization. Delivered a post-PRQ test program one quarter ahead of the EOL CRO PHI pull-in, with 1% better BEY.
+- Delivered a semiconductor product's production release qualification within a challenging timeline, supporting its transition to high-volume manufacturing.
+- Built AI-enabled workflows for data analysis and reporting, engineering release-note preparation, and lab support, reducing manual effort and accelerating routine tasks.
+- Automated test-program integration CI/CD, reducing execution time and supporting earlier product readiness and customer delivery.
+- Improved production-test efficiency and yield performance, contributing to product quality and manufacturing readiness.
 
 ## Experience
 
 ### Intel Microelectronics (M) Sdn Bhd — Penang
 **Senior Product Development Engineer** · 2024–Present
 
-- Develop test programs for Intel Infrastructure Processing Unit (IPU) products using TPIE and CMTP on Advantest CMT, and TORCH on Intel HDMT testers.
+- Develop production test programs for semiconductor products across multiple automated test equipment platforms.
 - Build MCP servers and AI skills with Gemini Enterprise and GitHub Copilot to connect internal tools and automate engineering workflows.
 - Convert legacy executable utilities into local MCP tools, enabling natural-language control and sharing the tools with the corporate community.
 - Automate test-program integration CI/CD with GitHub Actions and self-hosted runners; develop automated test-program violation checks.
-- Enable dual-socket testing for pre- and post-DRAM assembly, including test levels, timing, and socket pin-channel assignments.
-- Conduct BinMatrix and fuse-module updates, validate fuse strings, and support test-program infrastructure setup.
+- Expand test coverage across assembly stages and socket configurations, including test sequencing, timing, and hardware assignments.
+- Maintain test content and validate product configuration data to support test-program readiness.
 - Lead cross-functional, cross-geography discussions on test-program releases and cold-socket elimination planning.
 - Debug first silicon with DFT, design, and manufacturing teams; lead Sort-class test readiness for transition to HVM.
 - Design, review, and support fabrication of die-level Sort interface load boards using Cadence Allegro and Mentor Graphics.
@@ -38,7 +38,7 @@ Results-driven product and test engineer experienced in automated test equipment
 ### Intel Microelectronics (M) Sdn Bhd — Penang
 **Product Development Engineer** · 2021–2023
 
-- Developed DC test methods, including Vcc continuity, open/short, and EDM, for post-silicon validation of Intel IPU products.
+- Developed DC test methods for post-silicon validation of semiconductor products.
 - Collected data from nightly test runs to support yield-improvement planning and supported HVBI qualification during product ramp.
 - Optimized cold-socket test time to reduce HVM test costs; supported content owners with module submissions and development.
 

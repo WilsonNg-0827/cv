@@ -1,79 +1,568 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Wilson's Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Wilson Ng Wooi Sheng, Product Development Engineer specializing in semiconductor test and manufacturing.">
+  <title>Wilson Ng Wooi Sheng | Resume</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172b3a;
+      --muted: #526575;
+      --accent: #087e83;
+      --accent-dark: #075b63;
+      --line: #dce5e9;
+      --paper: #ffffff;
+      --canvas: #eef3f5;
+      --sidebar: #f4f8f8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 36px 18px;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .resume {
+      max-width: 1040px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: var(--paper);
+      border-radius: 18px;
+      box-shadow: 0 18px 55px rgb(23 43 58 / 12%);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 38px 48px;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .portrait {
+      width: 112px;
+      height: 112px;
+      flex: 0 0 112px;
+      border: 3px solid rgb(255 255 255 / 75%);
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 5px;
+      color: #9ee2dc;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 38px);
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+    }
+
+    .headline {
+      margin: 8px 0 16px;
+      color: #d4e3e8;
+      font-size: 16px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin: 0;
+      color: #e6eff1;
+      font-size: 13px;
+    }
+
+    .contact a {
+      color: #b8efea;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+    }
+
+    main {
+      min-width: 0;
+      padding: 36px 42px 44px 48px;
+    }
+
+    aside {
+      padding: 36px 30px 44px;
+      background: var(--sidebar);
+      border-left: 1px solid var(--line);
+    }
+
+    section + section {
+      margin-top: 30px;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      color: var(--accent-dark);
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h2::after {
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+      content: "";
+    }
+
+    .summary {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .achievement-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .achievement-list li {
+      margin: 0;
+      padding: 0 0 12px 14px;
+      border-left: 2px solid #9ed5d1;
+      color: var(--muted);
+    }
+
+    .achievement-list li + li {
+      margin-top: 10px;
+    }
+
+    .achievement-list strong {
+      color: var(--ink);
+    }
+
+    .job + .job {
+      margin-top: 23px;
+      padding-top: 21px;
+      border-top: 1px solid var(--line);
+    }
+
+    .job-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .date {
+      flex: 0 0 auto;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .company {
+      margin: 3px 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li {
+      padding-left: 2px;
+    }
+
+    .job li {
+      margin: 4px 0;
+      color: var(--muted);
+    }
+
+    aside section + section {
+      margin-top: 27px;
+    }
+
+    aside h2 {
+      font-size: 13px;
+    }
+
+    .skill-group + .skill-group {
+      margin-top: 13px;
+    }
+
+    .skill-group h3 {
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .skill-group p,
+    .side-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .side-copy + .side-copy {
+      margin-top: 9px;
+    }
+
+    .education-item + .education-item {
+      margin-top: 14px;
+    }
+
+    .education-item strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .education-item p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .languages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .languages span {
+      padding: 4px 9px;
+      border: 1px solid #d3e4e3;
+      border-radius: 20px;
+      background: #fff;
+      color: var(--accent-dark);
+      font-size: 12px;
+    }
+
+    .print-note {
+      max-width: 1040px;
+      margin: 12px auto 0;
+      color: #617482;
+      font-size: 12px;
+      text-align: right;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        padding: 14px 10px;
+      }
+
+      .resume {
+        border-radius: 12px;
+      }
+
+      .hero {
+        align-items: flex-start;
+        gap: 18px;
+        padding: 28px 24px;
+      }
+
+      .portrait {
+        width: 82px;
+        height: 82px;
+        flex-basis: 82px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 28px 24px;
+      }
+
+      aside {
+        padding: 28px 24px;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 0;
+      }
+
+      .resume {
+        border-radius: 0;
+      }
+
+      .hero {
+        display: block;
+        padding: 26px 22px;
+      }
+
+      .portrait {
+        margin-bottom: 15px;
+      }
+
+      .contact {
+        display: grid;
+        gap: 5px;
+      }
+
+      main,
+      aside {
+        padding-right: 22px;
+        padding-left: 22px;
+      }
+
+      .job-heading {
+        display: block;
+      }
+
+      .date {
+        display: block;
+        margin-top: 3px;
+      }
+
+      .print-note {
+        padding: 0 12px 12px;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      @page {
+        size: auto;
+        margin: 12mm;
+      }
+
+      body {
+        padding: 0;
+        background: #fff;
+        font-size: 10pt;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .resume {
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .hero {
+        padding: 24px 30px;
+      }
+
+      main {
+        padding: 26px 30px;
+      }
+
+      aside {
+        padding: 26px 22px;
+      }
+
+      .print-note {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .job,
+      .education-item {
+        break-inside: avoid;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <table cellspacing="20">
-    <tr>
-      <td><img src="Image/Wilson.png" alt="Wilson Profile Picture"></td>
-      <td>
+  <article class="resume">
+    <header class="hero">
+      <img class="portrait" src="Image/Wilson.png" alt="Wilson Ng Wooi Sheng">
+      <div>
+        <p class="eyebrow">Product Development Engineer</p>
         <h1>Wilson Ng Wooi Sheng</h1>
-        <p><em>Software design engineer</em></p>
-        <strong><em><a href="https://www.linkedin.com/in/wooi-sheng-ng-aa611881/">Linkedin Profile</a></em></strong>
-        <p>I am PLC programmer and software design engineer.</p>
-      </td>
-    </tr>
-  </table>
+        <p class="headline">ATE · High-Volume Manufacturing · Silicon Debug</p>
+        <p class="contact">
+          <span>Penang, Malaysia</span>
+          <a href="tel:+60147539151">+60 14-753 9151</a>
+          <a href="mailto:wsheng0827@gmail.com">wsheng0827@gmail.com</a>
+          <a href="https://www.linkedin.com/in/wooi-sheng-ng/">LinkedIn profile</a>
+        </p>
+      </div>
+    </header>
 
-  <hr>
-  <h3>Education and careers</h3>
-  <ul>
-    <li>KDU University College</li>
-    <ul>
-      <li>Bachelor Degree (HONS) of Electrical and Electronics Engineering</li>
-    </ul>
-    <li>Bakat Industri Sdn Bhd</li>
-    <ul>
-      <li>System Engineer</li>
-    </ul>
-    <li>Pentamaster Corporation Bhd</li>
-    <ul>
-      <li>Software Design Engineer</li>
-    </ul>
-  </ul>
+    <div class="content">
+      <main>
+        <section aria-labelledby="profile-heading">
+          <h2 id="profile-heading">Profile</h2>
+          <p class="summary">
+            Results-driven product and test engineer experienced in automated test equipment (ATE)
+            program development, high-volume manufacturing (HVM) ramp support, silicon debug, and
+            test-cost optimization. Interested in applying production-test expertise and AI-driven
+            automation to semiconductor manufacturing.
+          </p>
+        </section>
 
-  <hr>
-  <h3>Work Experience</h3>
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Work</th>
-      </tr>
-    </thead>
-    <tr>
-      <td>2018-2020</td>
-      <td>System Engineer at Bakat Industri Sdn Bhd</td>
-    </tr>
-    <tr>
-      <td>2020-Present</td>
-      <td>Software Design Engineer at Pentamaster Instrumentation Sdn Bhd</td>
-    </tr>
-  </table>
-  <hr>
-  <h3>Skills</h3>
+        <section aria-labelledby="achievements-heading">
+          <h2 id="achievements-heading">Key Achievements</h2>
+          <ul class="achievement-list">
+            <li><strong>IPU product readiness:</strong> Delivered the A-stepping Production Release Qualification (PRQ) within an aggressive three-quarter timeline, supporting the product’s transition to high-volume manufacturing.</li>
+            <li><strong>AI-enabled engineering automation:</strong> Automated waterfall cascade yield studies and Kappa result compilation with email dispatch, reducing reporting turnaround to under five minutes. Built test-program release-note summaries from cross-branch GitHub changes and submitter PR details, and automated lab ticket submissions for loading-unit and recipe requests.</li>
+            <li><strong>Accelerated customer delivery:</strong> Enabled system power-on five days ahead of schedule and customer power-on prototype shipments two days early. Streamlined test-program CI/CD execution from 30 minutes to 3 minutes, contributing to a <strong>$65M revenue pull-in</strong>.</li>
+            <li><strong>Test efficiency:</strong> Saved approximately 80 seconds of test time through cold-socket optimization. Delivered a post-PRQ test program one quarter ahead of the EOL CRO PHI pull-in, with 1% better BEY.</li>
+          </ul>
+        </section>
 
-  <table cellspacing="10">
-    <tr>
-      <td>PLC programming</td>
-      <td>⭐⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>WPF Development</td>
-      <td>⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>Web Development</td>
-      <td>⭐</td>
-    </tr>
-  </table>
-  <hr>
-  <a href="hobbies.html">My Hobbies</a>
-  <a href="my-contact.html">My Contacts</a>
+        <section aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+
+          <article class="job">
+            <div class="job-heading">
+              <h3>Senior Product Development Engineer</h3>
+              <span class="date">2024–Present</span>
+            </div>
+            <p class="company">Intel Microelectronics (M) Sdn Bhd · Penang</p>
+            <ul>
+              <li>Develop test programs for Intel Infrastructure Processing Unit (IPU) products using TPIE and CMTP on Advantest CMT, and TORCH on Intel HDMT testers.</li>
+              <li>Build MCP servers and AI skills with Gemini Enterprise and GitHub Copilot to connect internal tools and automate engineering workflows.</li>
+              <li>Convert legacy executable utilities into local MCP tools, enabling natural-language control and sharing the tools with the corporate community.</li>
+              <li>Automate test-program integration CI/CD with GitHub Actions and self-hosted runners; develop automated test-program violation checks.</li>
+              <li>Enable dual-socket testing for pre- and post-DRAM assembly, including test levels, timing, and socket pin-channel assignments.</li>
+              <li>Conduct BinMatrix and fuse-module updates, validate fuse strings, and support test-program infrastructure setup.</li>
+              <li>Lead cross-functional, cross-geography discussions on test-program releases and cold-socket elimination planning.</li>
+              <li>Debug first silicon with DFT, design, and manufacturing teams; lead Sort-class test readiness for transition to HVM.</li>
+              <li>Design, review, and support fabrication of die-level Sort interface load boards using Cadence Allegro and Mentor Graphics.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-heading">
+              <h3>Product Development Engineer</h3>
+              <span class="date">2021–2023</span>
+            </div>
+            <p class="company">Intel Microelectronics (M) Sdn Bhd · Penang</p>
+            <ul>
+              <li>Developed DC test methods, including Vcc continuity, open/short, and EDM, for post-silicon validation of Intel IPU products.</li>
+              <li>Collected data from nightly test runs to support yield-improvement planning and supported HVBI qualification during product ramp.</li>
+              <li>Optimized cold-socket test time to reduce HVM test costs; supported content owners with module submissions and development.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-heading">
+              <h3>Software Design Engineer II</h3>
+              <span class="date">2020–2021</span>
+            </div>
+            <p class="company">Pentamaster Corporation Bhd · Penang</p>
+            <ul>
+              <li>Designed and programmed handler-control software for burn-in testers, integrating XY gantry and Z-axis motion control with chamber-environment monitoring.</li>
+              <li>Developed modular C# software components to improve machine reliability and maintainability.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-heading">
+              <h3>System Engineer</h3>
+              <span class="date">2018–2020</span>
+            </div>
+            <p class="company">Bakat Industri Sdn Bhd · Selangor</p>
+            <ul>
+              <li>Developed SCADA graphics and control strategies using Siemens PCS 7.</li>
+              <li>Supported factory testing and commissioning for automation projects.</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+
+      <aside>
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <div class="skill-group">
+            <h3>ATE &amp; hardware</h3>
+            <p>ATE testing and debug, first-silicon debug, hardware design, TORCH, TPIE</p>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; automation</h3>
+            <p>Model Context Protocol (MCP), GitHub Copilot, Gemini Enterprise, AI agent development, prompt engineering, workflow automation</p>
+          </div>
+          <div class="skill-group">
+            <h3>Software &amp; programming</h3>
+            <p>Python, C#, GitHub Actions, CI/CD, Visual Studio, VS Code</p>
+          </div>
+          <div class="skill-group">
+            <h3>Analysis &amp; collaboration</h3>
+            <p>JMP, Jupyter Notebook, data analysis, problem solving, cross-functional collaboration</p>
+          </div>
+        </section>
+
+        <section aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <div class="education-item">
+            <strong>Bachelor of Engineering (Hons), Electrical and Electronics</strong>
+            <p>UOW Malaysia (formerly KDU University College)<br>Electronics and Embedded Systems · CGPA 3.39 · 2015–2018</p>
+          </div>
+          <div class="education-item">
+            <strong>Diploma in Electrical and Electronics Engineering</strong>
+            <p>UOW Malaysia (formerly KDU University College)<br>CGPA 3.72 · 2013–2015</p>
+          </div>
+        </section>
+
+        <section aria-labelledby="publications-heading">
+          <h2 id="publications-heading">Publications</h2>
+          <p class="side-copy">Main author, “Human Counting and Indoor Positioning using WiFi,” IEEE Conference, 2018.</p>
+          <p class="side-copy">Co-author, “Vending Machine Transaction Mechanism,” Journal, 2017.</p>
+        </section>
+
+        <section aria-labelledby="languages-heading">
+          <h2 id="languages-heading">Languages</h2>
+          <div class="languages">
+            <span>Mandarin · Native</span>
+            <span>English · Fluent</span>
+            <span>Malay · Fluent</span>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </article>
+  <p class="print-note">Tip: Use your browser’s Print command to save this resume as a PDF.</p>
 </body>
-
 </html>

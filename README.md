@@ -13,6 +13,13 @@ Results-driven product and test engineer experienced in automated test equipment
 - **Software and programming:** Python, C#, GitHub Actions, CI/CD, Visual Studio, VS Code
 - **Analysis and collaboration:** JMP, Jupyter Notebook, data analysis, problem solving, cross-functional collaboration
 
+## Key Achievements
+
+- Delivered the A-stepping IPU Production Release Qualification (PRQ) within an aggressive three-quarter timeline, supporting the product's transition to high-volume manufacturing.
+- Built AI-enabled engineering workflows: automated waterfall cascade yield studies and Kappa result compilation with email dispatch, reducing reporting turnaround to under five minutes; generated test-program release-note summaries by comparing cross-branch GitHub changes with submitter PR details; and automated lab support ticket submissions for loading-unit and recipe requests.
+- Enabled system power-on five days ahead of schedule and customer power-on prototype shipments two days early. Streamlined test-program CI/CD execution from 30 minutes to 3 minutes, contributing to a **$65M revenue pull-in**.
+- Saved approximately 80 seconds of test time through cold-socket optimization. Delivered a post-PRQ test program one quarter ahead of the EOL CRO PHI pull-in, with 1% better BEY.
+
 ## Experience
 
 ### Intel Microelectronics (M) Sdn Bhd — Penang
@@ -27,10 +34,6 @@ Results-driven product and test engineer experienced in automated test equipment
 - Lead cross-functional, cross-geography discussions on test-program releases and cold-socket elimination planning.
 - Debug first silicon with DFT, design, and manufacturing teams; lead Sort-class test readiness for transition to HVM.
 - Design, review, and support fabrication of die-level Sort interface load boards using Cadence Allegro and Mentor Graphics.
-- Delivered A-stepping IPU Production Release Qualification (PRQ) within an aggressive three-quarter timeline.
-- Drove AI-enabled workflows for yield reporting, release-note summarization, and lab ticket submissions. Reduced yield-reporting turnaround to under five minutes.
-- Helped start system power-on five days ahead of schedule and ship customer power-on prototypes two days early; streamlined CI/CD execution from 30 minutes to 3 minutes, contributing to a **$65M revenue pull-in**.
-- Saved approximately 80 seconds of test time through cold-socket optimization; delivered a post-PRQ test program one quarter ahead of the EOL CRO PHI pull-in, with 1% better BEY.
 
 ### Intel Microelectronics (M) Sdn Bhd — Penang
 **Product Development Engineer** · 2021–2023
